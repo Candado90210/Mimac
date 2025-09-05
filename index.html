@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centro Hilaria | Rehabilitación, Natación y Salud</title>
+  <meta name="description" content="Centro Hilaria en Mendoza: fisiokinesioterapia, natación para todas las edades, hidroterapia y acuagym. Piscina cubierta climatizada y convenios con obras sociales." />
+  <meta name="theme-color" content="#0277bd" />
+  <link rel="canonical" href="/" />
+
+  <!-- Preconnects & Fonts (performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="/images/favicon-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Centro Hilaria | Rehabilitación, Natación y Salud" />
+  <meta property="og:description" content="Más de 10 años comprometidos con tu bienestar en Mendoza. Hidroterapia, FKT, natación terapéutica." />
+  <meta property="og:image" content="/images/og-cover.jpg" />
+  <meta property="og:locale" content="es_AR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Manifest (PWA) -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <!-- Preload hero background to avoid LCP delay -->
+  <link rel="preload" as="image" href="https://z-cdn-media.chatglm.cn/files/d1ef3f36-1a09-47d9-ac21-c097a9815a4e_Sin%20t%C3%ADtulo1.png?auth_key=1788522376-9992928747aa4398bdf0a6edafe3ba89-0-fa920069396aea57a6d5d121ee427f48" imagesrcset="https://z-cdn-media.chatglm.cn/files/d1ef3f36-1a09-47d9-ac21-c097a9815a4e_Sin%20t%C3%ADtulo1.png?auth_key=1788522376-9992928747aa4398bdf0a6edafe3ba89-0-fa920069396aea57a6d5d121ee427f48 1920w" imagesizes="100vw" />
+
+  <!-- Font Awesome (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --primary: #0277bd;
+      --primary-600: #015b8e;
+      --secondary: #4fc3f7;
+      --accent: #80deea;
+      --text: #263238;
+      --muted: #546e7a;
+      --on-primary: #ffffff;
+      --surface: #ffffff;
+      --bg: #f5f9fa;
+      --bg-alt: #eceff1;
+    }
+
+    /* CSS reset + better defaults */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+    body { margin: 0; font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color: var(--text); background-color: var(--surface); line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-underline-offset: 2px; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+    .container { width: min(1200px, 92%); margin-inline: auto; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* Header */
+    header.site-header { position: sticky; top: 0; background: rgba(255,255,255,.98); backdrop-filter: saturate(180%) blur(8px); box-shadow: 0 2px 10px rgba(0,0,0,.06); z-index: 1000; }
+    .header-wrap { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center; padding: .8rem 0; }
+    .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+    .brand img { width: 44px; height: 44px; object-fit: contain; }
+    .brand__name { font-size: clamp(1.2rem, 2vw, 1.6rem); color: var(--primary); font-weight: 700; }
+
+    nav.primary-nav { position: relative; }
+    .nav__list { list-style: none; display: flex; gap: clamp(.8rem, 2vw, 1.5rem); padding: 0; margin: 0; }
+    .nav__link { text-decoration: none; font-weight: 600; color: var(--text); position: relative; }
+    .nav__link:hover, .nav__link[aria-current="page"] { color: var(--primary); }
+    .hamburger { display: none; background: transparent; border: 0; font-size: 1.5rem; color: var(--primary); }
+
+    /* Hero */
+    .hero { min-height: 80vh; display: grid; place-items: center; text-align: center; color: var(--on-primary); padding-top: 3.8rem; }
+    .hero__bg { position: fixed; inset: 0; z-index: -1; background:
+      linear-gradient(rgba(2,119,189,.7), rgba(79,195,247,.7)),
+      url('https://z-cdn-media.chatglm.cn/files/d1ef3f36-1a09-47d9-ac21-c097a9815a4e_Sin%20t%C3%ADtulo1.png?auth_key=1788522376-9992928747aa4398bdf0a6edafe3ba89-0-fa920069396aea57a6d5d121ee427f48') center/cover no-repeat;
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: .2rem 0 1rem; font-weight: 800; }
+    .hero p { font-size: clamp(1rem, 2.3vw, 1.2rem); max-width: 62ch; margin-inline: auto; }
+    .btn { display: inline-block; padding: .9rem 1.4rem; border-radius: 999px; background: var(--accent); color: var(--text); font-weight: 700; text-decoration: none; border: 0; cursor: pointer; }
+    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); transition: transform .2s; }
+
+    /* Sections */
+    section { scroll-margin-top: 5rem; }
+    .section-title { text-align: center; margin-bottom: 2.2rem; }
+    .section-title h2 { color: var(--primary); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 .6rem; }
+    .section-title p { color: var(--muted); max-width: 70ch; margin: .4rem auto 0; }
+
+    /* Services */
+    .services { background: var(--bg); padding: min(8vw, 5rem) 0; }
+    .grid { display: grid; gap: 1.5rem; }
+    .grid--responsive { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { background: var(--surface); border-radius: 14px; overflow: clip; box-shadow: 0 4px 16px rgba(0,0,0,.05); display: flex; flex-direction: column; }
+    .card__media { aspect-ratio: 16/9; overflow: hidden; }
+    .card__media img { width: 100%; height: 100%; object-fit: cover; }
+    .card__body { padding: 1.2rem; }
+    .card__body h3 { margin: 0 0 .5rem; color: var(--primary); font-size: 1.2rem; }
+    .card__body p { color: var(--muted); }
+
+    /* About */
+    .about { padding: min(8vw, 5rem) 0; }
+    .about__grid { display: grid; gap: 2rem; grid-template-columns: 1fr 1fr; align-items: center; }
+    .about__media { border-radius: 12px; overflow: clip; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+
+    /* Testimonials */
+    .testimonials { background: var(--bg); padding: min(8vw, 5rem) 0; }
+    .quote { position: relative; padding: 1.6rem; border-radius: 12px; background: var(--surface); box-shadow: 0 5px 15px rgba(0,0,0,.05); }
+    .quote p { margin: 0 0 1rem; color: var(--muted); font-style: italic; }
+    .client { display: flex; align-items: center; gap: .8rem; }
+    .avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; }
+
+    /* Team */
+    .team { padding: min(8vw, 5rem) 0; }
+    .member { overflow: clip; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,.05); background: var(--surface); }
+    .member__media { aspect-ratio: 4/5; overflow: hidden; }
+    .member__media img { width: 100%; height: 100%; object-fit: cover; }
+    .member__body { padding: 1rem; text-align: center; }
+    .social { display: flex; justify-content: center; gap: .6rem; }
+
+    /* Contact */
+    .contact { background: var(--bg); padding: min(8vw, 5rem) 0; }
+    .contact__grid { display: grid; gap: 2rem; grid-template-columns: 1fr 1fr; }
+    form { display: grid; gap: 1rem; }
+    label { font-weight: 600; }
+    input, textarea, select { width: 100%; padding: .8rem .9rem; border: 1px solid #e0e0e0; border-radius: 8px; font: inherit; }
+    textarea { min-height: 150px; resize: vertical; }
+    .btn--primary { background: var(--primary); color: var(--on-primary); }
+
+    /* Footer */
+    footer { background: #1f2937; color: #e5e7eb; padding: 3rem 0 1.2rem; }
+    .footer-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); margin-bottom: 1.4rem; }
+    .footer h3 { margin: 0 0 .6rem; }
+    .footer a { color: #cbd5e1; text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
+    .footer-bottom { text-align: center; font-size: .95rem; color: #cbd5e1; border-top: 1px solid rgba(255,255,255,.12); padding-top: 1rem; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about__grid, .contact__grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav__list { display: none; position: absolute; right: 0; top: 3rem; background: var(--surface); padding: .8rem 1rem; border-radius: 12px; box-shadow: 0 10px 24px rgba(0,0,0,.08); flex-direction: column; min-width: 220px; }
+      .nav__list[aria-expanded="true"] { display: flex; }
+      .hamburger { display: inline-grid; place-items: center; }
+    }
+  </style>
+
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Centro Hilaria",
+    "url": "https://www.centrohilaria.example/",
+    "logo": "https://www.centrohilaria.example/images/logo_hilaria.png",
+    "image": "https://www.centrohilaria.example/images/og-cover.jpg",
+    "telephone": "+54 261 396-7419",
+    "email": "centro.hilaria@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Acceso Este, Lateral Norte 2050",
+      "addressLocality": "Guaymallén",
+      "addressRegion": "Mendoza",
+      "addressCountry": "AR"
+    },
+    "openingHours": [
+      "Mo-Th 07:00-22:00",
+      "Fr 07:00-21:00",
+      "Sa 09:00-14:00"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-wrap">
+      <a class="brand" href="#home" aria-label="Inicio Centro Hilaria">
+        <img src="images/logo_hilaria.png" alt="Logo de Centro Hilaria" width="88" height="88" loading="eager" decoding="async" />
+        <span class="brand__name">Centro Hilaria</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Navegación principal">
+        <button class="hamburger" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <ul id="menu-principal" class="nav__list" data-js="menu">
+          <li><a class="nav__link" href="#home">Inicio</a></li>
+          <li><a class="nav__link" href="#services">Servicios</a></li>
+          <li><a class="nav__link" href="#about">Nosotros</a></li>
+          <li><a class="nav__link" href="#testimonials">Testimonios</a></li>
+          <li><a class="nav__link" href="#team">Equipo</a></li>
+          <li><a class="nav__link" href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero__bg" aria-hidden="true"></div>
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <div>
+        <p class="sr-only" id="hero-title">Centro Hilaria – Rehabilitación, Natación y Salud</p>
+        <h1>Rehabilitación, Natación y Salud</h1>
+        <p>Más de 10 años comprometidos con tu bienestar. Concebimos la salud como un derecho humano, promoviendo actividades acuáticas e hidroterapia con un trato cálido y profesional.</p>
+        <p><a class="btn" href="#services">Descubrí nuestros servicios</a></p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="services-title">Nuestros Servicios</h2>
+          <p>Enfoque integral para tu salud y bienestar con un equipo profesional altamente capacitado.</p>
+        </div>
+        <div class="grid grid--responsive">
+          <article class="card">
+            <div class="card__media">
+              <img src="images/natacion.jpg" alt="Sesión de fisiokinesioterapia en camilla" width="1280" height="720" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h3>Fisiokinesioterapia</h3>
+              <p>Tratamientos de rehabilitación por convenios con obras sociales. Programas personalizados para recuperar movilidad y funcionalidad.</p>
+              <p><a class="btn" href="#contact">Más información</a></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="images/natacion.jpg" alt="Clase de natación para niños en piscina" width="1280" height="720" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h3>Natación para todas las edades</h3>
+              <p>Clases para niños desde 2 años, adultos y adultos mayores. Entrenamiento de competición y para aguas abiertas.</p>
+              <p><a class="btn" href="#contact">Más información</a></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__media">
+              <img src="images/natacion.jpg" alt="Hidroterapia y acuagym en piscina climatizada" width="1280" height="720" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h3>Hidroterapia y Acuagym</h3>
+              <p>Beneficios del agua en piscina cubierta climatizada. Hidroterapia personalizada y sesiones grupales de acuagym.</p>
+              <p><a class="btn" href="#contact">Más información</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="about__media">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Piscina cubierta climatizada del centro" width="1000" height="667" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Instalaciones del Centro Hilaria</figcaption>
+        </figure>
+        <div>
+          <div class="section-title" style="text-align:left">
+            <h2 id="about-title">Sobre Centro Hilaria</h2>
+            <p>Más de 10 años de experiencia en rehabilitación, natación terapéutica y salud integral en Mendoza.</p>
+          </div>
+          <ul role="list" aria-label="Características">
+            <li><strong>Piscina cubierta climatizada:</strong> temperatura controlada todo el año.</li>
+            <li><strong>Convenios con obras sociales:</strong> acceso facilitado a servicios de rehabilitación.</li>
+            <li><strong>Estacionamiento propio:</strong> comodidad y seguridad para visitantes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="testimonials-title">Testimonios</h2>
+          <p>Experiencias reales de nuestros pacientes.</p>
+        </div>
+        <div class="grid grid--responsive">
+          <article class="quote" aria-label="Testimonio de María Rodríguez">
+            <p>“Después de mi lesión en la rodilla, pensé que no volvería a caminar normalmente. Gracias al equipo de rehabilitación recuperé mi movilidad.”</p>
+            <div class="client">
+              <span class="avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="María Rodríguez" width="96" height="96" loading="lazy" decoding="async"></span>
+              <div><strong>María Rodríguez</strong><br><small>Paciente de Rehabilitación</small></div>
+            </div>
+          </article>
+          <article class="quote" aria-label="Testimonio de José Martínez">
+            <p>“Las clases de natación terapéutica transformaron mi bienestar físico y mental.”</p>
+            <div class="client">
+              <span class="avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="José Martínez" width="96" height="96" loading="lazy" decoding="async"></span>
+              <div><strong>José Martínez</strong><br><small>Paciente de Natación Terapéutica</small></div>
+            </div>
+          </article>
+          <article class="quote" aria-label="Testimonio de Ana López">
+            <p>“El programa de salud integral me ayudó a adoptar hábitos saludables y prevenir dolencias.”</p>
+            <div class="client">
+              <span class="avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ana López" width="96" height="96" loading="lazy" decoding="async"></span>
+              <div><strong>Ana López</strong><br><small>Paciente de Salud Integral</small></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="team-title">Nuestro Equipo</h2>
+          <p>Profesionales que hacen posible tu recuperación y bienestar.</p>
+        </div>
+        <div class="grid grid--responsive">
+          <article class="member" itemscope itemtype="https://schema.org/Person">
+            <div class="member__media"><img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Dra. Laura Sánchez" width="600" height="750" loading="lazy" decoding="async"></div>
+            <div class="member__body">
+              <h3 itemprop="name">Dra. Laura Sánchez</h3>
+              <p><small>Directora Médica</small></p>
+              <p class="social" aria-label="Redes sociales de Laura">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </article>
+          <article class="member" itemscope itemtype="https://schema.org/Person">
+            <div class="member__media"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Dr. Carlos Gómez" width="600" height="750" loading="lazy" decoding="async"></div>
+            <div class="member__body">
+              <h3 itemprop="name">Dr. Carlos Gómez</h3>
+              <p><small>Especialista en Rehabilitación</small></p>
+              <p class="social" aria-label="Redes sociales de Carlos">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </article>
+          <article class="member" itemscope itemtype="https://schema.org/Person">
+            <div class="member__media"><img src="https://randomuser.me/api/portraits/women/36.jpg" alt="Dra. Elena Fernández" width="600" height="750" loading="lazy" decoding="async"></div>
+            <div class="member__body">
+              <h3 itemprop="name">Dra. Elena Fernández</h3>
+              <p><small>Especialista en Natación Terapéutica</small></p>
+              <p class="social" aria-label="Redes sociales de Elena">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </article>
+          <article class="member" itemscope itemtype="https://schema.org/Person">
+            <div class="member__media"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Dr. Miguel Pérez" width="600" height="750" loading="lazy" decoding="async"></div>
+            <div class="member__body">
+              <h3 itemprop="name">Dr. Miguel Pérez</h3>
+              <p><small>Especialista en Salud Integral</small></p>
+              <p class="social" aria-label="Redes sociales de Miguel">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="contact-title">Contacto</h2>
+          <p>Estamos para responder tus preguntas y ayudarte a comenzar tu camino hacia el bienestar.</p>
+        </div>
+        <div class="contact__grid">
+          <aside aria-label="Información de contacto">
+            <h3>Información</h3>
+            <ul role="list">
+              <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Acceso Este, Lateral Norte 2050, Guaymallén, Mendoza, Argentina</li>
+              <li><i class="fas fa-bus" aria-hidden="true"></i> Líneas: 221, 230, 554, 911, 921</li>
+              <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+542613967419">0261 396-7419</a></li>
+              <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:centro.hilaria@gmail.com">centro.hilaria@gmail.com</a></li>
+              <li><i class="fas fa-clock" aria-hidden="true"></i> Lun-Jue 07–22 · Vie 07–21 · Sáb 09–14</li>
+              <li><i class="fab fa-facebook-f" aria-hidden="true"></i> <a href="https://facebook.com/CentroHilaria.0" target="_blank" rel="noopener noreferrer">facebook.com/CentroHilaria.0</a></li>
+            </ul>
+          </aside>
+
+          <form id="contactForm" autocomplete="on" novalidate>
+            <div>
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" inputmode="email" required />
+            </div>
+            <div>
+              <label for="phone">Teléfono</label>
+              <input id="phone" name="phone" type="tel" placeholder="Código de área y número" autocomplete="tel" inputmode="tel" pattern="[0-9+\-\s()]{6,}" />
+            </div>
+            <div>
+              <label for="service">Servicio de interés</label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Seleccioná una opción</option>
+                <option value="rehabilitacion">Fisiokinesioterapia (FKT)</option>
+                <option value="natacion">Natación para niños</option>
+                <option value="natacion-adultos">Natación para adultos y adultos mayores</option>
+                <option value="hidroterapia">Hidroterapia personalizada</option>
+                <option value="acuagym">Acuagym</option>
+                <option value="competencia">Entrenamiento de competición</option>
+                <option value="aguas-abiertas">Entrenamiento para aguas abiertas</option>
+                <option value="postoperatorio">Postoperatorio</option>
+                <option value="general">Información general</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Contanos en qué podemos ayudarte" required></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+            <p id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container footer-grid footer">
+      <section>
+        <h3>Centro Hilaria</h3>
+        <p>Más de 10 años comprometidos con tu bienestar. Actividades acuáticas, hidroterapia y rehabilitación con trato cálido y profesional.</p>
+        <nav aria-label="Redes sociales">
+          <ul role="list" class="social" style="justify-content:flex-start">
+            <li><a href="https://facebook.com/CentroHilaria.0" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+          </ul>
+        </nav>
+      </section>
+      <section>
+        <h3>Enlaces rápidos</h3>
+        <ul role="list">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#team">Equipo</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Servicios</h3>
+        <ul role="list">
+          <li><a href="#services">Fisiokinesioterapia (FKT)</a></li>
+          <li><a href="#services">Natación para niños</a></li>
+          <li><a href="#services">Natación para adultos y adultos mayores</a></li>
+          <li><a href="#services">Hidroterapia personalizada</a></li>
+          <li><a href="#services">Acuagym</a></li>
+          <li><a href="#services">Entrenamiento de competición</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3>Newsletter</h3>
+        <form id="newsletterForm" novalidate>
+          <label class="sr-only" for="newsletterEmail">Correo electrónico</label>
+          <input id="newsletterEmail" type="email" placeholder="Tu email" required autocomplete="email" />
+          <button class="btn" type="submit">Suscribirse</button>
+          <p id="newsletterStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 Centro Hilaria. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot (carga perezosa tras inactividad) -->
+  <script type="module">
+    const initChat = () => import('https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js').then(({default: Chatbot}) => {
+      Chatbot.init({
+        chatflowid: 'a22ce643-3212-4f20-9a11-dc612762ecd5',
+        apiHost: 'http://localhost:3000',
+        theme: {
+          button: {
+            backgroundColor: '#0277bd', right: 20, bottom: 20, size: 50, dragAndDrop: true,
+            iconColor: 'white', customIconSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png',
+            autoWindowOpen: { autoOpen: true, openDelay: 3, autoOpenOnMobile: true }
+          },
+          tooltip: { showTooltip: true, tooltipMessage: '¿Necesitás ayuda? ¡Chateá con nosotros!', tooltipBackgroundColor: '#0277bd', tooltipTextColor: 'white', tooltipFontSize: 14 },
+          disclaimer: {
+            title: 'Aviso Legal',
+            message: 'Al usar este chatbot, aceptás los <a target="_blank" rel="noopener" href="#">Términos y Condiciones</a> de Centro Hilaria',
+            textColor: '#263238', buttonColor: '#0277bd', buttonText: 'Comenzar Chat', buttonTextColor: 'white',
+            blurredBackgroundColor: 'rgba(2, 119, 189, 0.2)', backgroundColor: 'white'
+          },
+          customCSS: `.flowise-chatbot-container{font-family:'Poppins',sans-serif}`,
+          chatWindow: {
+            showTitle: true, showAgentMessages: true, title: 'Asistente Virtual - Centro Hilaria',
+            titleAvatarSrc: 'https://natatorio.netlify.app/imagenes/logo_hilaria.png',
+            welcomeMessage: '¡Hola! Soy el asistente virtual de Centro Hilaria. ¿En qué puedo asistirte hoy?',
+            errorMessage: 'Lo sentimos, ocurrió un error. Intentalo más tarde.',
+            backgroundColor: '#ffffff', height: 600, width: 380, fontSize: 15,
+            starterPrompts: [
+              '¿Qué servicios de rehabilitación ofrecen?',
+              '¿Cuáles son los horarios de natación terapéutica?',
+              '¿Cómo puedo agendar una cita?',
+              '¿Qué programas de salud integral tienen?'
+            ],
+            starterPromptFontSize: 14,
+            clearChatOnReload: false, sourceDocsTitle: '', renderHTML: true,
+            botMessage: { backgroundColor: '#f5f9fa', textColor: '#263238', showAvatar: true, avatarSrc: 'https://natatorio.netlify.app/imagenes/logo_hilaria.png' },
+            userMessage: { backgroundColor: '#0277bd', textColor: '#ffffff', showAvatar: true, avatarSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712035.png' },
+            textInput: {
+              placeholder: 'Escribí tu pregunta…', backgroundColor: '#ffffff', textColor: '#263238', sendButtonColor: '#0277bd',
+              maxChars: 300, maxCharsWarningMessage: 'Máximo 300 caracteres.' , autoFocus: false, sendMessageSound: true, receiveMessageSound: true
+            },
+            feedback: { color: '#263238' }, dateTimeToggle: { date: true, time: true }, footer: { textColor: '#546e7a', text: 'Asistente virtual de', company: 'Centro Hilaria', companyLink: '#' }
+          }
+        }
+      });
+    });
+
+    // Carga diferida tras inactividad o interacción
+    const deferChat = () => {
+      if ('requestIdleCallback' in window) requestIdleCallback(initChat, {timeout: 3500});
+      else setTimeout(initChat, 2000);
+      window.removeEventListener('mousemove', deferChat);
+      window.removeEventListener('touchstart', deferChat);
+    };
+    window.addEventListener('mousemove', deferChat, { once: true });
+    window.addEventListener('touchstart', deferChat, { once: true });
+    window.addEventListener('load', () => setTimeout(deferChat, 1500));
+  </script>
+
+  <!-- JS: navegación accesible, validaciones y mejoras UX -->
+  <script>
+    // Toggle menú móvil accesible
+    const btn = document.querySelector('.hamburger');
+    const menu = document.querySelector('[data-js="menu"]');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.setAttribute('aria-expanded', String(!expanded));
+    });
+
+    // Marcar enlace actual en scroll
+    const links = Array.from(document.querySelectorAll('.nav__link'));
+    const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const setCurrent = () => {
+      const y = window.scrollY + 120;
+      sections.forEach((sec, i) => {
+        const link = links[i];
+        if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) link.setAttribute('aria-current','page');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    document.addEventListener('scroll', setCurrent, { passive: true });
+    window.addEventListener('load', setCurrent);
+
+    // Validación ligera del formulario de contacto
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        formStatus.textContent = 'Revisá los campos requeridos.';
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form).entries());
+      // TODO: enviar via fetch('/api/contact', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) })
+      form.innerHTML = `<div style="text-align:center;padding:2rem"><i class="fas fa-check-circle" aria-hidden="true" style="font-size:3rem;color:var(--accent)"></i><h3>¡Mensaje enviado!</h3><p>Gracias ${data.name}, te contactaremos pronto.</p></div>`;
+    });
+
+    // Newsletter
+    const newsletter = document.getElementById('newsletterForm');
+    const newsletterStatus = document.getElementById('newsletterStatus');
+    newsletter?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value;
+      if (!email) { newsletterStatus.textContent = 'Ingresá un correo válido.'; return; }
+      // TODO: fetch('/api/newsletter', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email})})
+      newsletterStatus.textContent = '¡Gracias por suscribirte!';
+      newsletter.reset();
+    });
+
+    // Registro de Service Worker (PWA)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
